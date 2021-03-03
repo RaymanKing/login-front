@@ -1,0 +1,88 @@
+#title{
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body{
+    background-image: url(/loginStrapi/static/img/fondo.jpg);
+    background-size: cover;
+}
+
+
+.main-section{
+    margin:0 auto;
+    margin-top: 30%;
+    padding: 0;
+    
+
+}
+
+.user-img{
+    margin-top: -90px;
+    margin-bottom: 35px;
+}
+
+.user-img img{
+    width: 200px;
+    height: 200px;
+
+
+}
+
+.modal-content{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0 20px;
+    box-shadow: 0px 0px 5px #03051600;
+}
+
+.form-group::before{
+    font-family: "Font awesome\ 5 free";
+    position: absolute;
+    left: 28px;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.form-group input{
+    height: 60px;
+    font-size: 30px;
+    border: 0;
+    padding-left: 60px;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.form-group#user::before{
+    content: "\f007";
+
+}
+
+.form-group#email::before{
+    content: "\f0e0";
+
+}
+
+.form-group#pass::before{
+    content: "\f13e";
+
+}
+
+.forgot a{
+    color: white;
+}
+
+.btn{
+    background-color: rgb(224, 77, 18);
+    width: 50%; 
+}
+
+.rpg{
+    display: flex;
+    justify-content: center;
+}
+
+.orange{
+    color: rgb(250, 79, 0);
+}
+
+
