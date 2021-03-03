@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>Login</title>
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Linkear js externo-->
+  <script type="text/javascript" src="js/verify.js"></script>
+
+  <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Los iconos tipo Solid de Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Css -->
+  <link rel="stylesheet" type="text/css" href="static/css/login.css">
+
+</head>
+
+<body>
+  <div class="modal-dialog text-center">
+    <div class="col-sn-8 main-section">
+      <div class="modal-content">
+        <form class="col-12" id="cuadro">
+          <div class="form-group" id="user">
+            <input class="form-control" type="email" placeholder="Email" id="email" />
+          </div>
+
+          <div class="form-group" id="pass">
+            <input class="form-control" type="password" placeholder="Contraseña" id="password" />
+          </div>
+
+          <button type="button" class="btn btn-danger" onclick="verificar()"><i class="fas fa-play"></i> Iniciar
+            sesion</button>
+        </form>
+        <div class="col-12 forgot">
+          <a href="register.html">¿No tienes cuenta? Registrate.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function verificar() {
+      let mail = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+      getDates(mail);
+      postRequest(mail, password);
+    }
+  </script>
+
+</body>
+
+</html>

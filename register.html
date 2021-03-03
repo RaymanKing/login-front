@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Login with Strapi</title>
+
+    <!-- ARCHIVO JS -->
+    <script type="text/javascript" src="js/register.js"></script>
+
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h1 id="title">Basic login with Strapi</h1>
+    <div class="modal-dialog text-center">
+        <div class="col-sn-8 main-section">
+            <div class="modal-content">
+                <form class="col-12" id="cuadro">
+                    <div class="form-group" id="user">
+                        <input id="name" class="form-control" type="text" placeholder="Nombre de usuario" />
+                    </div>
+
+                    <div class="form-group" id="email">
+                        <input id="mail" class="form-control" type="email" placeholder="Correo electronico" />
+                    </div>
+
+                    <div class="form-group" id="pass">
+                        <input id="password" class="form-control" type="password" placeholder="Contraseña" />
+                    </div>
+                    <center><button type="button" class="btn btn-danger" onclick="register()"><i class="fas fa-user-plus"></i> Registrarme</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function register(){
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('mail').value;
+            let password = document.getElementById('password').value;
+            if(name == "" || email == "" || password == ""){
+                alert('Porfavor introduce todos los datos')
+            }else{
+                postRequest(name, email, password);
+                alert('Te has registrado correctamente!');
+                location.href ="index.html";
+            }
+            
+        }
+    </script>
+</body>
+</html>
